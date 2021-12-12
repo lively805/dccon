@@ -47,6 +47,7 @@ body {
 .chat_outer_box {
   margin: 0.25rem 0;
   padding: 5px;
+  margin-bottom: 8px;
   width: 100%;
   background: rgba(0, 0, 0, 0.9);
   position: relative;
@@ -59,7 +60,7 @@ body {
     background: -moz-linear-gradient(left, #0068FF 0%, #1C6EA4 45%, #FFFFFF 100%);
     background: -webkit-linear-gradient(left, #0068FF 0%, #1C6EA4 45%, #FFFFFF 100%);
     background: linear-gradient(to right, #0068FF 0%, #1C6EA4 45%, #FFFFFF 100%);
-      opacity: 0.7;
+      opacity: 0.6;
       margin: -8px -8px 3px;
       padding: 6px 10px;
       border-radius: 0 0 0 0;
@@ -91,7 +92,7 @@ body {
 .chat_msg_box {
   padding: 0.25rem 0.25rem;
   max-height: 14rem; /* 텍스트 영역 최대 높이 */
-  font-size: 1.4rem;
+  font-size: 1.43rem;
 }
 .chat_msg_box.image_only {
   text-align: center;
