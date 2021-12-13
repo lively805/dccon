@@ -44,6 +44,7 @@ body {
   line-height: 1.5rem;
   word-wrap: break-word;
 }
+
 .chat_outer_box {
   margin: 0.25rem 0;
   padding: 5px;
@@ -53,6 +54,7 @@ body {
   position: relative;
   overflow: hidden;
 }
+
 /* Nickname / Badge */
 .chat_upper_box {
   display: block;
@@ -84,16 +86,19 @@ body {
   margin: 0 0 0 0.1rem;
   border: 0.125rem solid rgba(0, 0, 0, 0.5);
 }
+
 /* Messages */
 .chat_lower_box {
   position: relative;
   color: #fff;
 }
+
 .chat_msg_box {
   padding: 0.25rem 0.25rem;
   max-height: 14rem; /* 텍스트 영역 최대 높이 */
   font-size: 1.43rem;
 }
+
 .chat_msg_box.image_only {
   text-align: center;
 }
@@ -112,5 +117,5 @@ body {
   height: 2rem;
 }
 .dccon {
-  height: 10rem;
+  height: 9rem;
 }
