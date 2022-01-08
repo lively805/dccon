@@ -64,9 +64,9 @@ body {
 .chat_upper_box {
   display: block;
     background: #0068FF;
-    background: -moz-linear-gradient(left, #0068FF 0%, #1C6EA4 45%, #FFFFFF 100%);
-    background: -webkit-linear-gradient(left, #0068FF 0%, #1C6EA4 45%, #FFFFFF 100%);
-    background: linear-gradient(to right, #0068FF 0%, #1C6EA4 45%, #FFFFFF 100%);
+    background: -moz-linear-gradient(left, #000000 0%, #079EFF 50%, #00FFEB 100%);
+    background: -webkit-linear-gradient(left, #000000 0%, #079EFF 50%, #00FFEB 100%);
+    background: linear-gradient(to right, #000000 0%, #079EFF 50%, #00FFEB 100%);
       opacity: 0.6;
       margin: -8px -8px 3px;
       padding: 3px 10px;
