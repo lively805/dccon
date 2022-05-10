@@ -9,19 +9,11 @@
 /*@import url(https://fonts.googleapis.com/css?family=Lato);*/
 
 /* noto-sans-kr-900 - latin */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
 @font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 900;
-  src: url('../fonts/noto-sans-kr-v21-latin-900.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../fonts/noto-sans-kr-v21-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/noto-sans-kr-v21-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/noto-sans-kr-v21-latin-900.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/noto-sans-kr-v21-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/noto-sans-kr-v21-latin-900.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+  font-family: 'Noto Sans KR', sans-serif;
+  src: url();
 }
-
 * {
   box-sizing: border-box;
 }
@@ -42,34 +34,44 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 1.5rem;
+  line-height: 2.5rem;
   word-wrap: break-word;
 }
-@keyframes Appear {
-	0%	{ opacity:0.4; }
-	to	{ opacity:1; } }
-.chat_outer_box	{ animation:Appear .3s ease forwards; }
+@keyframes fadeInRight {
+  0% {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translateZ(0);
+  }
+}
+.chat_outer_box	 {
+  position: relative;
+  animation: fadeInRight .3s;
+}
 
 .chat_outer_box {
   margin: 0.25rem 0;
   padding: 1px;
   margin-bottom: 8px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
 }
 
 /* Nickname / Badge */
 .chat_upper_box {
-  display: block;
+  display: none;
       background: #000000;
-      background: -moz-linear-gradient(45deg, #000000 0%, #1C6EA4 50%, #009CFF 100%);
-      background: -webkit-linear-gradient(45deg, #000000 0%, #1C6EA4 50%, #009CFF 100%);
-      background: linear-gradient(45deg, #000000 0%, #1C6EA4 50%, #009CFF 100%);
-      opacity: 0.6;
-      margin: -8px -8px 3px;
-      padding: 4.5px 10px;
+      background: -moz-linear-gradient(left, #000000 0%, #FFFFFF 100%);
+      background: -webkit-linear-gradient(left, #000000 0%, #FFFFFF 100%);
+      background: linear-gradient(to right, #000000 0%, #FFFFFF 100%);
+      opacity: 0.8;
+      margin: -8px -8px 5px;
+      padding: 5px 10px;
       border-radius: 0 0 0 0;
 }
 .chat_nickname_box {
@@ -101,11 +103,19 @@ body {
 .chat_msg_box {
   padding: 0.25rem 0.25rem;
   max-height: 14rem; /* 텍스트 영역 최대 높이 */
-  font-size: 1.2rem;
+  font-size: 1.7rem;
+  text-shadow:0 0 0.1em #000,0 0 0.1em #000,0 0 0.1em #000,0 0 0.1em #000,
+    0 0 0.1em #000,0 0 0.1em #000,0 0 0.1em #000,0 0 0.1em #000,
+    0 0 0.1em #000,0 0 0.1em #000,0 0 0.1em #000,0 0 0.1em #000,
+    0 0 0.1em #000,0 0 0.1em #000,0 0 0.1em #000,0 0 0.1em #000,
+    0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,
+    0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,
+    0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,
+    0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000,0.05em 0.05em 0.05em #000;
 }
 
 .chat_msg_box.image_only {
-  text-align: center;
+  text-align: left;
 }
 .chat_msg_box.image_only:empty {
   display: none;
@@ -122,5 +132,5 @@ body {
   height: 3rem;
 }
 .dccon {
-  height: 8rem;
+  height: 9rem;
 }
